@@ -36,9 +36,11 @@ themselves proven with `tofu plan`.
 | at or above 100 kgCO2e/yr | **fails: carbon acknowledgement required** |
 | plan failed / nothing quantifiable | pass, "not evaluated" |
 
-To accept an increase: **first comment the reason, then add the label `eg/carbon-accepted`**. The label
-event re-runs the check, which records who accepted and why. Or commit a suggestion instead. Merging is
-always a human decision; the gate never pushes, approves or merges.
+To accept an increase: **add the label `eg/carbon-accepted` and submit a pull-request review (Comment or
+Approve) on the latest commit with the reason as its body**, both as the same person, who needs write access; submitting
+the review re-runs the check, which then records who accepted and why. An acknowledgement covers only that
+head commit: after a new push, review again. Or commit a suggestion instead. Merging is always a human decision; the gate never
+pushes, approves or merges.
 
 New resources have no telemetry, so their utilisation is **assumed** (CCF's 50% default) and always
 shown as a 10–90% range. Existing resources use observed utilisation from the synthetic telemetry.
